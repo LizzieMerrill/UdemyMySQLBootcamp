@@ -10,3 +10,13 @@ ORDER BY Price DESC;
 --Sorts products by rice in ascending order (default call)
 SELECT * FROM products
 ORDER BY Price;
+
+--[insert function]
+SELECT 
+    customerName,
+    COUNT(*) AS 'number of orders'
+FROM customers
+INNER JOIN orders
+	ON orders.CustomerID = customers.CustomerID
+GROUP BY customers.customerID
+ORDER BY "number of orders" DESC;

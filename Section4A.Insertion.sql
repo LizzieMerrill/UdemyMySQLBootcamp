@@ -79,3 +79,8 @@ SELECT * FROM cats;
 +-------------+------+
 6 rows in set (0.00 sec)
 */
+
+
+
+
+-- 4.40 Exercise

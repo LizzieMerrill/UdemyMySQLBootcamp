@@ -34,3 +34,60 @@ name VARCHAR(50),
 breed VARCHAR(50), -- same as cats table except for added breed
 age INT
 ); 
+
+
+-- simple command to show all tables in current database being used
+SHOW TABLES;
+-- +--------------------+
+-- | Tables_in_pet_shop |
+-- +--------------------+
+-- | cats               |
+-- | dogs               |
+-- +--------------------+
+
+
+USE tea_shop;
+-- Database changed
+SHOW TABLES; -- there are no tables in the tea shop database yet
+-- Empty set (0.00 sec)
+
+
+-- SHOW COLUMNS FROM <tablename>; shows columns in a table
+-- or DESC tablename; , same thing
+
+SHOW COLUMNS FROM cats;
+-- ERROR 1146 (42S02): Table 'tea_shop.cats' doesn't exist
+USE pet_shop;
+-- Database changed
+SHOW COLUMNS FROM cats;
+-- +-------+-------------+------+-----+---------+-------+
+-- | Field | Type        | Null | Key | Default | Extra |
+-- +-------+-------------+------+-----+---------+-------+
+-- | name  | varchar(50) | YES  |     | NULL    |       |
+-- | age   | int         | YES  |     | NULL    |       |
+-- +-------+-------------+------+-----+---------+-------+
+-- 2 rows in set (0.00 sec)
+SHOW COLUMNS FROM dogs;
+-- +-------+-------------+------+-----+---------+-------+
+-- | Field | Type        | Null | Key | Default | Extra |
+-- +-------+-------------+------+-----+---------+-------+
+-- | name  | varchar(50) | YES  |     | NULL    |       |
+-- | breed | varchar(50) | YES  |     | NULL    |       |
+-- | age   | int         | YES  |     | NULL    |       |
+-- +-------+-------------+------+-----+---------+-------+
+-- 3 rows in set (0.00 sec)
+
+
+
+
+/*
+DESC tablename;
+DESCRIBE tablename;
+*/
+DESCRIBE cats;
+-- shows cats data again
+DESC cats; -- common practice
+-- shows cats data again
+
+
+-- In workbench or GUI-based editor, you can click into a table and on the bottom left corner it'll display the table's characteristics

@@ -16,6 +16,10 @@ DROP DATABASE pet_shop;
 -- USE <database name>; -- same function as double clicking on a database, selecting it as the field to work in
 SELECT database(); -- a command that shows the current database you're in
 
+
+
+
+
 -- example:
 USE chicken_coop;
 -- terminal: Database changed
@@ -44,3 +48,7 @@ SELECT database();
 -- +--------------+
 -- | chicken_coop |
 -- +--------------+
+
+
+
+-- double clicking on a database on left-hand side of workbench has same effect as use function

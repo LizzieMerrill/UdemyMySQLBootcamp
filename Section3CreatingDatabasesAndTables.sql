@@ -52,3 +52,6 @@ SELECT database();
 
 
 -- double clicking on a database on left-hand side of workbench has same effect as use function
+
+
+-- varchar(100) as a datatype for a column indicates there are only a maximum of 100 characters allowed in any given data cell

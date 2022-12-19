@@ -21,3 +21,26 @@ USE chicken_coop;
 -- terminal: Database changed
 SELECT database();
 -- terminal: 
+-- +--------------+
+-- | database()   |
+-- +--------------+
+-- | chicken_coop |
+-- +--------------+
+
+CREATE DATABASE tea_shop;
+-- terminal: Query OK, 1 row affected (0.01 sec)
+SELECT database();
+-- terminal: 
+-- +--------------+
+-- | database()   |
+-- +--------------+
+-- | chicken_coop |
+-- +--------------+
+USE tea_shop;
+-- terminal: Database changed
+SELECT database();
+-- +--------------+
+-- | database()   |
+-- +--------------+
+-- | chicken_coop |
+-- +--------------+

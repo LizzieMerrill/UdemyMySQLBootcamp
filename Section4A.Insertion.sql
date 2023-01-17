@@ -198,3 +198,10 @@ SELECT * FROM people;
 +------------+------------+------+
 5 rows in set (0.00 sec)
 */
+-- After exercise is done, he says to drop the people table ;-; I hope you're happy sir, you just caused all people to go extinct
+DROP TABLE people;
+-- Query OK, 0 rows affected (0.02 sec)
+/*
+SELECT * FROM people;
+ERROR 1146 (42S02): Table 'pet_shop.people' doesn't exist
+*/

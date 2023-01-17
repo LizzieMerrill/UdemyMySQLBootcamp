@@ -70,4 +70,38 @@ SELECT * FROM cats2;
 
 
 
--- Best Practice: ALWAYS USE SINGLE QUOTES, NEVER DOUBLE QUOTES!!!
+-- Best Practice: ALWAYS USE SINGLE QUOTES, NEVER DOUBLE QUOTES!!!**********************************************************************************8
+
+
+CREATE TABLE shops (name VARCHAR(100));
+-- Query OK, 0 rows affected (0.01 sec)
+INSERT INTO shops(name) VALUES('shoe emporium');
+-- Query OK, 1 row affected (0.00 sec)
+INSERT INTO shops(name) VALUES ('mario\'s pizza'); -- You have to put a backslash in front of any single quotes being used as apostrophes mid-text
+-- Query OK, 1 row affected (0.01 sec)
+SELECT * FROM shops;
+/*
++---------------+
+| name          |
++---------------+
+| shoe emporium |
+| mario's pizza |
++---------------+
+2 rows in set (0.00 sec)
+*/
+INSERT INTO shops(name) VALUES('she said "haha"'); -- shows that you don't have to escape a set of double quotes if they exist within a set of single quotes
+-- Query OK, 1 row affected (0.01 sec)
+
+SELECT * FROM shops;
+/*
++-----------------+
+| name            |
++-----------------+
+| shoe emporium   |
+| mario's pizza   |
+| she said "haha" |
++-----------------+
+3 rows in set (0.00 sec)
+*/
+-- ************************************************************************************************************************************************8
+

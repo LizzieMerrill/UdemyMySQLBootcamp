@@ -67,3 +67,7 @@ SELECT * FROM cats2;
 +-------+-----+
 1 row in set (0.00 sec)
 */
+
+
+
+-- Best Practice: ALWAYS USE SINGLE QUOTES, NEVER DOUBLE QUOTES!!!
